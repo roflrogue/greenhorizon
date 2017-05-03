@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    text-decoration: none;
+    list-style: none;
+}
+.hide{
+    display: none;
+}
+body{
+    display:flex;
+    flex-direction: column;
+    max-width: 100vw;
+}
+header{
+    display: block;
+    background-image: url("../img/leaf-banner-bg.jpg");
+    background-size: cover;
+    border-bottom: 3px outset #43C000;
+    border-top: 3px outset #43C000;
+    box-shadow: 0 0 5px black;
+}
+.page-header{
+    border-top:none;
+}
+nav{
+    label{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        right: 0;
+        height:5em;
+        width: 5em;
+        background-image: url(../img/sun.png);
+        background-size: contain;
+        transition: 1s all;
+        span{
+            display: block;
+            height: .3em;
+            width: 2em;
+            background: rgba(0,0,0,1);
+            border-radius: 7px;
+            transition: 0s all .25s;
+        }
+        span:before{
+            content: "";
+            display: block;
+            height: 100%;
+            width: 100%;
+            border-radius: 7px;
+            position: relative;
+            top: -.6em;
+            background-color: black;
+            transition: 0s all .25s;
+        }
+        span:after{
+            content: "";
+            display: block;
+            height: 100%;
+            width: 100%;
+            border-radius: 7px;
+            position: relative;
+            top: .3em;
+            background-color: black;
+            transition: 0s all .25s;
+        }
+    }
+    #menu-toggle:checked ~ label{
+        transform: rotateY(180deg);
+        span{
+            background: rgba(0,0,0,0);
+        }
+        span:before{
+            transform: translateY(.6em)rotate(45deg);
+            background-color: red;
+            box-shadow: 0 0 3px red;
+        }
+        span:after{
+            transform: translateY(-.6em)rotate(-45deg);
+            background-color: red;
+            box-shadow: 0 0 3px red;
+        }
+    }
+    .menu{
+        position: fixed;
+        height: 100vh;
+        width: 40vw;
+        top: 0;
+        left: -40vw;
+        background: radial-gradient(ellipse at center, #7dee40 0%,#51e800 100%);
+        transition: .5s all;
+        z-index: 10;
+        li{
+            line-height: 25vh;
+            text-align: center;
+            .drop-down{
+            }
+        }
+    }
+    #menu-toggle:checked ~ ul{
+        transform: translateX(40vw);
+    }
+}

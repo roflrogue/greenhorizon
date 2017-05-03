@@ -1,0 +1,125 @@
+/* line 1, ../sass/style.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* line 9, ../sass/style.scss */
+.hide {
+  display: none;
+}
+
+/* line 12, ../sass/style.scss */
+body {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+}
+
+/* line 17, ../sass/style.scss */
+header {
+  display: block;
+  background-image: url("../img/leaf-banner-bg.jpg");
+  background-size: cover;
+  border-bottom: 3px outset #43C000;
+  border-top: 3px outset #43C000;
+  box-shadow: 0 0 5px black;
+}
+
+/* line 25, ../sass/style.scss */
+.page-header {
+  border-top: none;
+}
+
+/* line 29, ../sass/style.scss */
+nav label {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  height: 5em;
+  width: 5em;
+  background-image: url(../img/sun.png);
+  background-size: contain;
+  transition: 1s all;
+}
+/* line 42, ../sass/style.scss */
+nav label span {
+  display: block;
+  height: .3em;
+  width: 2em;
+  background: black;
+  border-radius: 7px;
+  transition: 0s all .25s;
+}
+/* line 50, ../sass/style.scss */
+nav label span:before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 7px;
+  position: relative;
+  top: -.6em;
+  background-color: black;
+  transition: 0s all .25s;
+}
+/* line 61, ../sass/style.scss */
+nav label span:after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 7px;
+  position: relative;
+  top: .3em;
+  background-color: black;
+  transition: 0s all .25s;
+}
+/* line 73, ../sass/style.scss */
+nav #menu-toggle:checked ~ label {
+  transform: rotateY(180deg);
+}
+/* line 75, ../sass/style.scss */
+nav #menu-toggle:checked ~ label span {
+  background: transparent;
+}
+/* line 78, ../sass/style.scss */
+nav #menu-toggle:checked ~ label span:before {
+  transform: translateY(0.6em) rotate(45deg);
+  background-color: red;
+  box-shadow: 0 0 3px red;
+}
+/* line 83, ../sass/style.scss */
+nav #menu-toggle:checked ~ label span:after {
+  transform: translateY(-0.6em) rotate(-45deg);
+  background-color: red;
+  box-shadow: 0 0 3px red;
+}
+/* line 89, ../sass/style.scss */
+nav .menu {
+  position: fixed;
+  height: 100vh;
+  width: 40vw;
+  top: 0;
+  left: -40vw;
+  background: radial-gradient(ellipse at center, #7dee40 0%, #51e800 100%);
+  transition: .5s all;
+  z-index: 10;
+}
+/* line 98, ../sass/style.scss */
+nav .menu li {
+  line-height: 25vh;
+  text-align: center;
+}
+/* line 105, ../sass/style.scss */
+nav #menu-toggle:checked ~ ul {
+  transform: translateX(40vw);
+}
