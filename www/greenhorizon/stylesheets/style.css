@@ -212,5 +212,6 @@ main section article .services {
 main section article .services .service {
   width: 50%;
   line-height: 1.5em;
+  font-size: .85em;
   text-align: center;
 }
