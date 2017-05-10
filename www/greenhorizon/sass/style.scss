@@ -5,6 +5,10 @@
     color: black;
     text-decoration: none;
     list-style: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Love Ya Like A Sister', cursive;
 }
 .hide{
     display: none;
@@ -21,12 +25,15 @@ header{
     border-bottom: 3px outset #43C000;
     border-top: 3px outset #43C000;
     box-shadow: 0 0 5px black;
+    h2{
+        font-size: 2em;
+    }
 }
 .page-header{
     border-top:none;
 }
 nav{
-    label{
+    .main-toggle{
         position: fixed;
         display: flex;
         flex-direction: column;
@@ -91,18 +98,88 @@ nav{
         height: 100vh;
         width: 40vw;
         top: 0;
-        left: -40vw;
-        background: radial-gradient(ellipse at center, #7dee40 0%,#51e800 100%);
+        left: calc(-40vw - 10px);
+        background: linear-gradient(#7dee40 0%,#51e800 100%);
         transition: .5s all;
-        z-index: 10;
+        box-shadow: 5px 0 5px black;
         li{
             line-height: 25vh;
             text-align: center;
-            .drop-down{
-            }
+        }
+        label{
+            display: block;
+            height: 100%;
+            width:100%;
         }
     }
-    #menu-toggle:checked ~ ul{
-        transform: translateX(40vw);
+    #menu-toggle:checked ~ .menu{
+        transform: translateX(calc(40vw + 5px));
+    }
+    .sub-menu{
+        position: fixed;
+        height: 100vh;
+        width: 40vw;
+        top:0;
+        left:calc(-40vw - 10px);;
+        background: linear-gradient(#7dee40 0%,#51e800 100%);
+        transition: .5s all;
+        box-shadow: 6px 0 5px black;
+    }
+    #sub-menu-toggle:checked ~ .sub-menu{
+        transform:translateX(80vw);
+    }
+}
+main{
+    section{
+        article{
+            display: flex;
+            flex-direction: column;
+            background: radial-gradient(ellipse at center, #ffee9d 0%,#ffe66e 100%);
+            .slider-box{
+                display: block;
+                max-height: 337px;
+                max-width:449px;
+                box-shadow: 0 0 5px black;
+                .slides{
+                    display:flex;
+                    flex-direction: row;
+                    max-height: 337px;
+                    max-width:449px;
+                    overflow: hidden;
+                    .slide{
+                        display:block;
+                        max-width:100vw;
+                    }
+                }
+            }
+            header{
+                width: 100%;
+                text-align: center;
+                h1,h2,h3{
+                    padding: 2vh 0;
+                }
+            }
+            p{
+                padding: 1vh 2.5vw;
+                text-align: center;
+                font-size: 1.25em;
+                line-height: 1.5em;
+            }
+            .services{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin: 2vh 2.5vw;
+                padding: 2vh 2.5vw;
+                border: 3px outset #43C000;
+                background: linear-gradient(#7dee40 0%,#51e800 100%);
+                box-shadow: 0 0 5px black;
+                .service{
+                    width:50%;
+                    line-height: 1.5em;
+                    text-align: center;
+                }
+            }
+        }
     }
 }
