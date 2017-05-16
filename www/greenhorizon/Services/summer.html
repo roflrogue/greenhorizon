@@ -5,30 +5,35 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width = device-width, initial-scale = 1">
-        <link type="text/css" rel="stylesheet" href="stylesheets/style.css"> 
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Love+Ya+Like+A+Sister" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="../stylesheets/style.css"> 
     </head>
     <body>
-        <header>
-            <img src="img/logo.png" alt="Green Horizons Lawn Service logo" />
+        <header class="page-header">
+            <img src="../img/logo.png" alt="Green Horizons Lawn Service logo" />
+            <h1 class="hide">Green Horizons Lawn Service</h1>
         </header>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a>
-                    <ul>
-                        <li><a href="#">Spring</a></li>
-                        <li><a href="#">Summer</a></li>
-                        <li><a href="#">Fall</a></li>
-                        <li><a href="#">Winter</a></li>
+            <input type="checkbox" id="menu-toggle" class="hide"/>
+            <label for="menu-toggle" class="main-toggle"><span></span></label>
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li>
+                    <input type="checkbox" id="sub-menu-toggle" class="hide"/>
+                    <label for="sub-menu-toggle">Services</label>
+                    <ul class="sub-menu">
+                        <li><a href="spring.html">Spring</a></li>
+                        <li><a href="summer.html">Summer</a></li>
+                        <li><a href="fall.html">Fall</a></li>
+                        <li><a href="winter.html">Winter</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../about.html">About Us</a></li>
             </ul>
         </nav>
         <main>
             <section>
-                <h1>Green Horizons Lawn Service</h1>
                 <article>
                     <header><h2>Quality Lawn Care</h2></header>
                     <p>Having a beautiful lawn requires quality lawn maintenance. Whether you just need your lawn mowed, or you want a golf course back yard, we can handle it for you. We follow industry guidelines, from cutting height, to clipping cleanup to protect your root system and provide optimal growth. We provide a wide range of services!</p>
