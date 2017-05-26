@@ -6,7 +6,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width = device-width, initial-scale = 1">
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Love+Ya+Like+A+Sister" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="stylesheets/style.css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     </head>
     <body>
         <header class="page-header">
@@ -35,17 +37,43 @@
         <main>
             <section>
                 <article>
-                    <div class="slider-box">
+                    <div class="slide-box" id="slider">
+                        <section class="slide-btns">
+                            <span id="pre">
+                                <span class="material-icons">keyboard_arrow_left</span>
+                            </span>
+                            <span id="next">
+                                <span class="material-icons">keyboard_arrow_right</span>
+                            </span>
+                        </section>
                         <ul class="slides">
-                            <li><img class="slide" src="img/flowers.jpg"  /></li>
-                            <li><img class="slide" src="img/winter.jpg"  /></li>
-                            <li><img class="slide" src="img/mulch.jpg"  /></li>
-                            <li><img class="slide" src="img/stripes.jpg"  /></li>
-                            <li><img class="slide" src="img/house-lawn00.jpg"  /></li>
-                            <li><img class="slide" src="img/snow-push.jpg"  /></li>
-                            <li><img class="slide" src="img/house-lawn01.jpg"  /></li>
-                            <li><img class="slide" src="img/truck.jpg"  /></li>
-                            <li><img class="slide" src="img/flowers.jpg"  /></li>
+                            <li class="slide">
+                                <img class="slide-img" src="img/flowers.jpg"  />
+                            </li>
+                            <li class="slide">
+                                <img class="slide-img" src="img/winter.jpg"  />
+                            </li>
+                            <li class="slide">
+                                <img class="slide-img" src="img/mulch.jpg"  />
+                            </li>
+                            <li class="slide">
+                                <img class="slide-img" src="img/stripes.jpg"  />
+                            </li>
+                            <li class="slide">
+                                <img class="slide-img" src="img/house-lawn00.jpg"  />
+                            </li>
+                            <li class="slide">
+                                <img class="slide-img" src="img/snow-push.jpg"  />
+                            </li>
+                            <li class="slide">
+                                <img class="slide-img" src="img/house-lawn01.jpg"  />
+                            </li>
+                            <li class="slide">
+                                <img class="slide-img" src="img/truck.jpg"  />
+                            </li>
+                            <li class="slide">
+                                <img class="slide-img" src="img/flowers.jpg"  />
+                            </li>
                         </ul>
                     </div>
                 </article>
@@ -72,6 +100,8 @@
                 </article>
             </section>
         </main>
-        <footer></footer>
+        <footer>
+            <script src="js/slider.js"></script>
+        </footer>
     </body>
 </html>

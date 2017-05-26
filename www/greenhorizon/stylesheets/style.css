@@ -10,23 +10,33 @@
 }
 
 /* line 10, ../sass/style.scss */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, span {
   font-family: 'Love Ya Like A Sister', cursive;
 }
 
 /* line 13, ../sass/style.scss */
 .hide {
-  display: none;
+  display: inline-block;
+  position: absolute;
+  top: -100vh;
+  left: -100vw;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  font-size: 0;
 }
 
-/* line 16, ../sass/style.scss */
+/* line 26, ../sass/style.scss */
 body {
   display: flex;
   flex-direction: column;
   max-width: 100vw;
 }
 
-/* line 21, ../sass/style.scss */
+/* line 31, ../sass/style.scss */
 header {
   display: block;
   background-image: url("../img/leaf-banner-bg.jpg");
@@ -35,17 +45,22 @@ header {
   border-top: 3px outset #43C000;
   box-shadow: 0 0 5px black;
 }
-/* line 28, ../sass/style.scss */
+/* line 38, ../sass/style.scss */
 header h2 {
   font-size: 2em;
 }
 
-/* line 32, ../sass/style.scss */
+/* line 42, ../sass/style.scss */
 .page-header {
   border-top: none;
 }
+/* line 44, ../sass/style.scss */
+.page-header img {
+  max-width: 100vw;
+  max-height: 300px;
+}
 
-/* line 36, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
 nav .main-toggle {
   position: fixed;
   display: flex;
@@ -60,7 +75,7 @@ nav .main-toggle {
   background-size: contain;
   transition: 1s all;
 }
-/* line 49, ../sass/style.scss */
+/* line 63, ../sass/style.scss */
 nav .main-toggle span {
   display: block;
   height: .3em;
@@ -69,7 +84,7 @@ nav .main-toggle span {
   border-radius: 7px;
   transition: 0s all .25s;
 }
-/* line 57, ../sass/style.scss */
+/* line 71, ../sass/style.scss */
 nav .main-toggle span:before {
   content: "";
   display: block;
@@ -81,7 +96,7 @@ nav .main-toggle span:before {
   background-color: black;
   transition: 0s all .25s;
 }
-/* line 68, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 nav .main-toggle span:after {
   content: "";
   display: block;
@@ -93,27 +108,27 @@ nav .main-toggle span:after {
   background-color: black;
   transition: 0s all .25s;
 }
-/* line 80, ../sass/style.scss */
+/* line 94, ../sass/style.scss */
 nav #menu-toggle:checked ~ label {
   transform: rotateY(180deg);
 }
-/* line 82, ../sass/style.scss */
+/* line 96, ../sass/style.scss */
 nav #menu-toggle:checked ~ label span {
   background: transparent;
 }
-/* line 85, ../sass/style.scss */
+/* line 99, ../sass/style.scss */
 nav #menu-toggle:checked ~ label span:before {
   transform: translateY(0.6em) rotate(45deg);
   background-color: red;
   box-shadow: 0 0 3px red;
 }
-/* line 90, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 nav #menu-toggle:checked ~ label span:after {
   transform: translateY(-0.6em) rotate(-45deg);
   background-color: red;
   box-shadow: 0 0 3px red;
 }
-/* line 96, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 nav .menu {
   position: fixed;
   height: 100vh;
@@ -124,22 +139,23 @@ nav .menu {
   transition: .5s all;
   box-shadow: 5px 0 5px black;
 }
-/* line 105, ../sass/style.scss */
+/* line 119, ../sass/style.scss */
 nav .menu li {
   line-height: 25vh;
   text-align: center;
+  font-size: 1.2em;
 }
-/* line 109, ../sass/style.scss */
+/* line 124, ../sass/style.scss */
 nav .menu label {
   display: block;
   height: 100%;
   width: 100%;
 }
-/* line 115, ../sass/style.scss */
+/* line 130, ../sass/style.scss */
 nav #menu-toggle:checked ~ .menu {
   transform: translateX(calc(40vw + 5px));
 }
-/* line 118, ../sass/style.scss */
+/* line 133, ../sass/style.scss */
 nav .sub-menu {
   position: fixed;
   height: 100vh;
@@ -150,54 +166,87 @@ nav .sub-menu {
   transition: .5s all;
   box-shadow: 6px 0 5px black;
 }
-/* line 128, ../sass/style.scss */
+/* line 143, ../sass/style.scss */
 nav #sub-menu-toggle:checked ~ .sub-menu {
   transform: translateX(80vw);
 }
 
-/* line 134, ../sass/style.scss */
+/* line 149, ../sass/style.scss */
 main section article {
   display: flex;
   flex-direction: column;
   background: radial-gradient(ellipse at center, #ffee9d 0%, #ffe66e 100%);
 }
-/* line 138, ../sass/style.scss */
-main section article .slider-box {
+/* line 153, ../sass/style.scss */
+main section article .slide-box {
   display: block;
+  position: relative;
   max-height: 337px;
   max-width: 449px;
   box-shadow: 0 0 5px black;
 }
-/* line 143, ../sass/style.scss */
-main section article .slider-box .slides {
+/* line 159, ../sass/style.scss */
+main section article .slide-box .slides {
   display: flex;
   flex-direction: row;
-  max-height: 337px;
-  max-width: 449px;
   overflow: hidden;
 }
-/* line 149, ../sass/style.scss */
-main section article .slider-box .slides .slide {
+/* line 163, ../sass/style.scss */
+main section article .slide-box .slides .slide {
   display: block;
   max-width: 100vw;
 }
-/* line 155, ../sass/style.scss */
+/* line 166, ../sass/style.scss */
+main section article .slide-box .slides .slide .slide-img {
+  display: block;
+  max-width: 100vw;
+}
+/* line 172, ../sass/style.scss */
+main section article .slide-box .slide-btns {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+/* line 179, ../sass/style.scss */
+main section article .slide-box .slide-btns span {
+  height: 100%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 185, ../sass/style.scss */
+main section article .slide-box .slide-btns span span {
+  color: white;
+}
+/* line 189, ../sass/style.scss */
+main section article .slide-box .slide-btns #pre {
+  background: -moz-linear-gradient(right, transparent, black);
+}
+/* line 192, ../sass/style.scss */
+main section article .slide-box .slide-btns #next {
+  background: -moz-linear-gradient(left, transparent, black);
+}
+/* line 197, ../sass/style.scss */
 main section article header {
   width: 100%;
   text-align: center;
 }
-/* line 158, ../sass/style.scss */
+/* line 200, ../sass/style.scss */
 main section article header h1, main section article header h2, main section article header h3 {
   padding: 2vh 0;
 }
-/* line 162, ../sass/style.scss */
+/* line 204, ../sass/style.scss */
 main section article p {
   padding: 1vh 2.5vw;
   text-align: center;
   font-size: 1.25em;
   line-height: 1.5em;
 }
-/* line 168, ../sass/style.scss */
+/* line 210, ../sass/style.scss */
 main section article .services {
   display: flex;
   flex-direction: row;
@@ -208,7 +257,7 @@ main section article .services {
   background: linear-gradient(#7dee40 0%, #51e800 100%);
   box-shadow: 0 0 5px black;
 }
-/* line 177, ../sass/style.scss */
+/* line 219, ../sass/style.scss */
 main section article .services .service {
   width: 50%;
   line-height: 1.5em;
