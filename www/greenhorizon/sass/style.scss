@@ -109,6 +109,7 @@ nav{
     }
     .menu{
         position: fixed;
+        z-index: 20;
         height: 100vh;
         width: 40vw;
         top: 0;
@@ -227,5 +228,30 @@ main{
     }
 }
 footer{
-
+    display: block;
+    height:100vh;
+    width:100vw;
+    background-color: #343434;
+    *{
+        color:orangered;
+    }
+    article{
+        padding: 0vh 5vw;
+    }
+    header{
+        font-family: 'Love Ya Like A Sister', cursive;
+        background-image: none;
+        border:none;
+        box-shadow: none;
+        font-size: 1.3em;
+        font-weight: bold;
+        padding:2vh 0vw;
+        letter-spacing: .1em;
+    }
+    ul{
+        padding: 1vh 0vw;
+        li{
+            padding: 1vh 0vw;
+        }
+    }
 }

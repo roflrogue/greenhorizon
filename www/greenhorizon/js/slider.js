@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var animSpeed = 1000;
     var pause = 4000;
-    var width = "100vw";
+    var width = "100%";
     var atSlide = 1;
     //cache DOM
     var $slider = $("#slider");
@@ -42,7 +42,7 @@ $(document).ready(function(){
                 console.log(atSlide);
             }else if(atSlide<=1){
                 atSlide = $slides.length;
-                $slideBox.css('margin-left','-400vw');
+                $slideBox.css('margin-left','-800%');
                 $slideBox.animate({'margin-left': '+='+width},animSpeed);
                 atSlide--;
                 console.log(atSlide);
