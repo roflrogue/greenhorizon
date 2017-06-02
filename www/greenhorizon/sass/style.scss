@@ -60,6 +60,7 @@ nav{
         background-image: url(../img/sun.png);
         background-size: contain;
         transition: 1s all;
+        z-index: 100;
         span{
             display: block;
             height: .3em;
@@ -120,12 +121,15 @@ nav{
         li{
             line-height: 25vh;
             text-align: center;
-            font-size: 1.2em;
-        }
-        label{
-            display: block;
-            height: 100%;
-            width:100%;
+            a{
+                font-size:1.25em;
+            }
+            label{
+                display: block;
+                font-size: 1.25em;
+                height: 100%;
+                width:100%;
+            }
         }
     }
     #menu-toggle:checked ~ .menu{
@@ -229,11 +233,13 @@ main{
 }
 footer{
     display: block;
-    height:100vh;
+    height:calc(100vh + 3px);
     width:100vw;
+    border-top: 3px outset #43C000;
+    box-shadow: 0 0 5px black;
     background-color: #343434;
     *{
-        color:orangered;
+        color:#43C000;
     }
     article{
         padding: 0vh 5vw;
