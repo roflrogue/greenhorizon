@@ -155,9 +155,8 @@ main{
             display: flex;
             flex-direction: column;
             background: radial-gradient(ellipse at center, #ffee9d 0%,#ffe66e 100%);
-            padding: 5vh 0 0 0;
             &:last-of-type{
-                padding: 5vh 0 5vh 0;
+                padding: 0 0 5vh 0;
             }
             .slide-box{
                 display: block;
@@ -232,6 +231,24 @@ main{
                     text-align: center;
                 }
             }
+        }
+        .spring:nth-child(1){
+            background-image: url(../img/Spring-Cherry-Blossom.png),radial-gradient(ellipse at center, #ffee9d 0%,#ffe66e 100%);;
+            background-repeat: no-repeat;
+            background-position: top right;
+            background-size: contain;
+        }
+        .spring:nth-child(2){
+            background-image: url(../img/branch-left-br.png), url(../img/branch-right-br.png),radial-gradient(ellipse at center, #ffee9d 0%,#ffe66e 100%);;
+            background-repeat: no-repeat, no-repeat;
+            background-position: bottom left, bottom right;
+            background-size: contain;
+        }
+        .spring:nth-child(3){
+            background-image: url(../img/sun-flower.png),radial-gradient(ellipse at center, #ffee9d 0%,#ffe66e 100%);;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            background-size: contain;
         }
     }
 }
