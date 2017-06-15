@@ -136,58 +136,70 @@ nav .menu {
   height: 100vh;
   width: 40vw;
   top: 0;
-  left: calc(-40vw - 10px);
-  background: linear-gradient(#7dee40 0%, #51e800 100%);
+  left: calc(-40vw - 5px);
+  background: url(../img/wood.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
   transition: .5s all;
   box-shadow: 5px 0 5px black;
 }
-/* line 121, ../sass/style.scss */
+/* line 124, ../sass/style.scss */
 nav .menu li {
   line-height: 25vh;
   text-align: center;
+  max-width: 40vw;
 }
-/* line 124, ../sass/style.scss */
-nav .menu li a {
-  font-size: 1.25em;
-}
-/* line 127, ../sass/style.scss */
-nav .menu li label {
+/* line 128, ../sass/style.scss */
+nav .menu li label, nav .menu li a {
   display: block;
+  color: #ffffff;
+  font-weight: bold;
   font-size: 1.25em;
   height: 100%;
   width: 100%;
+  max-width: 40vw;
+  transition: .3s all;
+  letter-spacing: .2em;
 }
-/* line 135, ../sass/style.scss */
+/* line 138, ../sass/style.scss */
+nav .menu li label:hover, nav .menu li a:hover {
+  cursor: pointer;
+}
+/* line 144, ../sass/style.scss */
 nav #menu-toggle:checked ~ .menu {
   transform: translateX(calc(40vw + 5px));
 }
-/* line 138, ../sass/style.scss */
+/* line 147, ../sass/style.scss */
 nav .sub-menu {
   position: fixed;
   height: 100vh;
   width: 40vw;
   top: 0;
-  left: calc(-40vw - 10px);
-  background: linear-gradient(#7dee40 0%, #51e800 100%);
+  opacity: 0;
+  left: -40vw;
   transition: .5s all;
-  box-shadow: 6px 0 5px black;
 }
-/* line 148, ../sass/style.scss */
-nav #sub-menu-toggle:checked ~ .sub-menu {
+/* line 156, ../sass/style.scss */
+nav #sub-menu-toggle:checked ~ .menu {
+  width: 80vw;
+}
+/* line 158, ../sass/style.scss */
+nav #sub-menu-toggle:checked ~ .menu .sub-menu {
   transform: translateX(80vw);
+  opacity: 1;
 }
 
-/* line 154, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
+main {
+  background: radial-gradient(ellipse at center, #ffee9d 0%, #ffe66e 100%);
+}
+/* line 167, ../sass/style.scss */
 main section article {
   display: flex;
   flex-direction: column;
-  background: radial-gradient(ellipse at center, #ffee9d 0%, #ffe66e 100%);
 }
-/* line 158, ../sass/style.scss */
-main section article:last-of-type {
-  padding: 0 0 5vh 0;
-}
-/* line 161, ../sass/style.scss */
+/* line 170, ../sass/style.scss */
 main section article .slide-box {
   display: block;
   position: relative;
@@ -195,23 +207,23 @@ main section article .slide-box {
   max-width: 449px;
   box-shadow: 0 0 5px black;
 }
-/* line 167, ../sass/style.scss */
+/* line 176, ../sass/style.scss */
 main section article .slide-box .slides {
   display: flex;
   flex-direction: row;
   overflow: hidden;
 }
-/* line 171, ../sass/style.scss */
+/* line 180, ../sass/style.scss */
 main section article .slide-box .slides .slide {
   display: block;
   max-width: 100vw;
 }
-/* line 174, ../sass/style.scss */
+/* line 183, ../sass/style.scss */
 main section article .slide-box .slides .slide .slide-img {
   display: block;
   max-width: 100vw;
 }
-/* line 180, ../sass/style.scss */
+/* line 189, ../sass/style.scss */
 main section article .slide-box .slide-btns {
   position: absolute;
   display: flex;
@@ -220,7 +232,7 @@ main section article .slide-box .slide-btns {
   height: 100%;
   width: 100%;
 }
-/* line 187, ../sass/style.scss */
+/* line 196, ../sass/style.scss */
 main section article .slide-box .slide-btns span {
   height: 100%;
   width: 10%;
@@ -228,35 +240,35 @@ main section article .slide-box .slide-btns span {
   justify-content: center;
   align-items: center;
 }
-/* line 193, ../sass/style.scss */
+/* line 202, ../sass/style.scss */
 main section article .slide-box .slide-btns span span {
   color: white;
 }
-/* line 197, ../sass/style.scss */
+/* line 206, ../sass/style.scss */
 main section article .slide-box .slide-btns #pre {
   background: linear-gradient(right, transparent, black);
 }
-/* line 200, ../sass/style.scss */
+/* line 209, ../sass/style.scss */
 main section article .slide-box .slide-btns #next {
   background: linear-gradient(left, transparent, black);
 }
-/* line 205, ../sass/style.scss */
+/* line 214, ../sass/style.scss */
 main section article header {
   width: 100%;
   text-align: center;
 }
-/* line 208, ../sass/style.scss */
+/* line 217, ../sass/style.scss */
 main section article header h1, main section article header h2, main section article header h3 {
   padding: 2vh 0;
 }
-/* line 212, ../sass/style.scss */
+/* line 221, ../sass/style.scss */
 main section article p {
-  padding: 5vh 2.5vw 0 2.5vw;
+  padding: 5vh 2.5vw 5vh 2.5vw;
   text-align: center;
   font-size: 1.25em;
   line-height: 1.5em;
 }
-/* line 218, ../sass/style.scss */
+/* line 227, ../sass/style.scss */
 main section article .services {
   display: flex;
   flex-direction: row;
@@ -267,53 +279,64 @@ main section article .services {
   background: linear-gradient(#7dee40 0%, #51e800 100%);
   box-shadow: 0 0 5px black;
 }
-/* line 227, ../sass/style.scss */
+/* line 236, ../sass/style.scss */
 main section article .services .service {
   width: 50%;
   line-height: 1.5em;
   font-size: .85em;
   text-align: center;
 }
-/* line 235, ../sass/style.scss */
+/* line 244, ../sass/style.scss */
 main section .spring:nth-child(1) {
-  background-image: url(../img/Spring-Cherry-Blossom.png), radial-gradient(ellipse at center, #ffee9d 0%, #ffe66e 100%);
+  background-image: url(../img/Spring-Cherry-Blossom.png);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: contain;
 }
-/* line 241, ../sass/style.scss */
+/* line 250, ../sass/style.scss */
 main section .spring:nth-child(2) {
-  background-image: url(../img/branch-left-br.png), url(../img/branch-right-br.png), radial-gradient(ellipse at center, #ffee9d 0%, #ffe66e 100%);
+  background-image: url(../img/branch-left-br.png), url(../img/branch-right-br.png);
   background-repeat: no-repeat, no-repeat;
   background-position: bottom left, bottom right;
   background-size: contain;
 }
-/* line 247, ../sass/style.scss */
+/* line 256, ../sass/style.scss */
 main section .spring:nth-child(3) {
-  background-image: url(../img/sun-flower.png), radial-gradient(ellipse at center, #ffee9d 0%, #ffe66e 100%);
+  background-image: url(../img/sun-flower.png);
   background-repeat: no-repeat;
-  background-position: bottom center;
+  background-position: bottom left;
   background-size: contain;
 }
+/* line 262, ../sass/style.scss */
+main section .spring:nth-child(4) {
+  background-image: url(../img/vines-left.png), url(../img/vines-right.png);
+  background-repeat: no-repeat;
+  background-position: top left, top right;
+  background-size: contain, contain;
+}
 
-/* line 255, ../sass/style.scss */
+/* line 270, ../sass/style.scss */
 footer {
   display: block;
   height: calc(100vh + 3px);
   width: 100vw;
   border-top: 3px outset #43C000;
   box-shadow: 0 0 5px black;
-  background-color: #343434;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, #000000 100%), url(../img/wood.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
 }
-/* line 262, ../sass/style.scss */
+/* line 280, ../sass/style.scss */
 footer * {
-  color: #43C000;
+  color: #c9c9c9;
+  letter-spacing: .1em;
 }
-/* line 265, ../sass/style.scss */
+/* line 285, ../sass/style.scss */
 footer article {
   padding: 0vh 5vw;
 }
-/* line 268, ../sass/style.scss */
+/* line 288, ../sass/style.scss */
 footer header {
   font-family: 'Love Ya Like A Sister', cursive;
   background-image: none;
@@ -324,11 +347,26 @@ footer header {
   padding: 2vh 0vw;
   letter-spacing: .1em;
 }
-/* line 278, ../sass/style.scss */
+/* line 298, ../sass/style.scss */
 footer ul {
   padding: 1vh 0vw;
 }
-/* line 280, ../sass/style.scss */
+/* line 300, ../sass/style.scss */
 footer ul li {
   padding: 1vh 0vw;
+}
+/* line 302, ../sass/style.scss */
+footer ul li a {
+  transition: .3s all;
+}
+/* line 304, ../sass/style.scss */
+footer ul li a:hover {
+  color: white;
+}
+
+@media all and (orientation: landscape) {
+  /* line 312, ../sass/style.scss */
+  footer {
+    background-size: 100% auto;
+  }
 }
