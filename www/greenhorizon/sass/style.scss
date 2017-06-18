@@ -113,6 +113,7 @@ nav{
         z-index: 20;
         height: 100vh;
         width: 40vw;
+        max-width:300px;
         top: 0;
         left: calc(-40vw - 5px);
         background: url(../img/wood.jpeg);
@@ -124,7 +125,6 @@ nav{
         li{
             line-height: 25vh;
             text-align: center;
-            max-width: 40vw;
             label, a{
                 display: block;
                 color:#ffffff;
@@ -155,9 +155,20 @@ nav{
     }
     #sub-menu-toggle:checked ~ .menu{
         width: 80vw;
+        max-width:600px;
+        li{
+            max-width:50%;
+        }
         .sub-menu{
-            transform:translateX(80vw);
+            transform:translateX(calc(40vw));
+            width:80vw;
+            max-width:300px;
             opacity: 1;
+            margin:0 0 0 50%;
+            li{
+                width:100%;
+                max-width: 100%;
+            }
         }
     }
 }
@@ -173,6 +184,7 @@ main{
                 max-height: 337px;
                 max-width:449px;
                 box-shadow: 0 0 5px black;
+                overflow: hidden;
                 .slides{
                     display:flex;
                     flex-direction: row;
@@ -219,7 +231,7 @@ main{
                 }
             }
             p{
-                padding: 5vh 2.5vw 5vh 2.5vw;
+                padding: 0vh 2.5vw 0vh 2.5vw;
                 text-align: center;
                 font-size: 1.25em;
                 line-height: 1.5em;
