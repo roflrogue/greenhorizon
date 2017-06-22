@@ -175,9 +175,13 @@ nav{
 main{
     background: radial-gradient(ellipse at center, #ffee9d 0%,#ffe66e 100%);
     section{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         article{
             display: flex;
             flex-direction: column;
+            width:100vw;
             .slide-box{
                 display: block;
                 position: relative;
@@ -231,7 +235,7 @@ main{
                 }
             }
             p{
-                padding: 0vh 2.5vw 0vh 2.5vw;
+                padding: 2.5vh 2.5vw 2.5vh 2.5vw;
                 text-align: center;
                 font-size: 1.25em;
                 line-height: 1.5em;
@@ -290,7 +294,6 @@ footer{
     background-position: center;
     background-size: auto 100%;
     *{
-        //color:#43C000;
         color:#c9c9c9;
         letter-spacing: .1em;
     }
@@ -322,6 +325,50 @@ footer{
 }
 @media all and (orientation: landscape){
     footer{
-        background-size: 100% auto;
+        background-size: cover;
+    }
+}
+@media screen and (min-width: 480px){
+    main{
+        section{
+            article{
+                &:first-of-type{   
+                    padding: 2.5vh 2.5vw 2.5vh 2.5vw;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 720px){
+    main{
+        section{
+            article{
+                &:first-of-type{
+                    flex-direction: row;   
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:1080px){
+    main{
+        section{
+            justify-content: space-between;
+            article{
+                border: 3px outset #43C000;
+                border-top:0;
+                width: 45vw;
+                margin: 2.5vh 2.5vw;
+                &:first-of-type{
+                    margin:0;
+                    border:0;
+                    width:100vw;
+                }
+                &:nth-child(4){
+                    width:100vw;
+                }
+            }
+        }
     }
 }
