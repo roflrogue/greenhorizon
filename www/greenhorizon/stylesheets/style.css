@@ -223,14 +223,15 @@ main section article {
 main section article .slide-box {
   background-color: #ffc333;
   overflow: hidden;
-  max-height: 337px;
-  max-width: 449px;
+  height: 337px;
+  width: 449px;
+  max-width: 100%;
 }
-/* line 190, ../sass/style.scss */
+/* line 191, ../sass/style.scss */
 main section article .slide-box .slides {
   position: relative;
 }
-/* line 192, ../sass/style.scss */
+/* line 193, ../sass/style.scss */
 main section article .slide-box .slides .slide {
   display: block;
   position: relative;
@@ -238,7 +239,7 @@ main section article .slide-box .slides .slide {
   width: 449px;
   float: left;
 }
-/* line 200, ../sass/style.scss */
+/* line 201, ../sass/style.scss */
 main section article .slide-box .slide-btns {
   display: flex;
   flex-direction: row;
@@ -247,8 +248,9 @@ main section article .slide-box .slide-btns {
   position: absolute;
   height: 337px;
   width: 449px;
+  max-width: 100%;
 }
-/* line 208, ../sass/style.scss */
+/* line 210, ../sass/style.scss */
 main section article .slide-box .slide-btns * {
   height: 100%;
   width: 15%;
@@ -257,23 +259,23 @@ main section article .slide-box .slide-btns * {
   justify-content: center;
   align-items: center;
 }
-/* line 219, ../sass/style.scss */
+/* line 221, ../sass/style.scss */
 main section article header {
   width: 100%;
   text-align: center;
 }
-/* line 222, ../sass/style.scss */
+/* line 224, ../sass/style.scss */
 main section article header h1, main section article header h2, main section article header h3 {
   padding: 2vh 0;
 }
-/* line 226, ../sass/style.scss */
+/* line 228, ../sass/style.scss */
 main section article p {
   padding: 2.5vh 2.5vw 2.5vh 2.5vw;
   text-align: center;
   font-size: 1.25em;
   line-height: 1.5em;
 }
-/* line 232, ../sass/style.scss */
+/* line 234, ../sass/style.scss */
 main section article .services {
   display: flex;
   flex-direction: row;
@@ -284,35 +286,35 @@ main section article .services {
   background: linear-gradient(#7dee40 0%, #51e800 100%);
   box-shadow: 0 0 5px black;
 }
-/* line 241, ../sass/style.scss */
+/* line 243, ../sass/style.scss */
 main section article .services .service {
   width: 50%;
   line-height: 1.5em;
   font-size: .85em;
   text-align: center;
 }
-/* line 249, ../sass/style.scss */
+/* line 251, ../sass/style.scss */
 main section article:nth-child(1) {
   background-image: url(../img/Spring-Cherry-Blossom.png);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: contain;
 }
-/* line 255, ../sass/style.scss */
+/* line 257, ../sass/style.scss */
 main section article:nth-child(2) {
   background-image: url(../img/branch-left-br.png), url(../img/branch-right-br.png);
   background-repeat: no-repeat, no-repeat;
   background-position: bottom left, bottom right;
   background-size: contain;
 }
-/* line 261, ../sass/style.scss */
+/* line 263, ../sass/style.scss */
 main section article:nth-child(3) {
   background-image: url(../img/sun-flower.png);
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: contain;
 }
-/* line 267, ../sass/style.scss */
+/* line 269, ../sass/style.scss */
 main section article:nth-child(4) {
   background-image: url(../img/vines-left.png), url(../img/vines-right.png);
   background-repeat: no-repeat;
@@ -320,7 +322,7 @@ main section article:nth-child(4) {
   background-size: contain, contain;
 }
 
-/* line 278, ../sass/style.scss */
+/* line 277, ../sass/style.scss */
 footer {
   display: block;
   height: calc(100vh + 3px);
@@ -332,16 +334,16 @@ footer {
   background-position: center;
   background-size: auto 100%;
 }
-/* line 288, ../sass/style.scss */
+/* line 287, ../sass/style.scss */
 footer * {
   color: #c9c9c9;
   letter-spacing: .1em;
 }
-/* line 292, ../sass/style.scss */
+/* line 291, ../sass/style.scss */
 footer article {
   padding: 0vh 5vw;
 }
-/* line 295, ../sass/style.scss */
+/* line 294, ../sass/style.scss */
 footer header {
   font-family: 'Love Ya Like A Sister', cursive;
   background-image: none;
@@ -352,65 +354,65 @@ footer header {
   padding: 2vh 0vw;
   letter-spacing: .1em;
 }
-/* line 305, ../sass/style.scss */
+/* line 304, ../sass/style.scss */
 footer ul {
   padding: 1vh 0vw;
 }
-/* line 307, ../sass/style.scss */
+/* line 306, ../sass/style.scss */
 footer ul li {
   padding: 1vh 0vw;
 }
-/* line 309, ../sass/style.scss */
+/* line 308, ../sass/style.scss */
 footer ul li a {
   transition: .3s all;
 }
-/* line 311, ../sass/style.scss */
+/* line 310, ../sass/style.scss */
 footer ul li a:hover {
   color: white;
 }
 
 @media all and (orientation: landscape) {
-  /* line 319, ../sass/style.scss */
+  /* line 318, ../sass/style.scss */
   footer {
     background-size: cover;
   }
 }
 @media screen and (min-width: 480px) {
-  /* line 327, ../sass/style.scss */
+  /* line 326, ../sass/style.scss */
   main section article:first-of-type {
     padding: 2.5vh 2.5vw 2.5vh 2.5vw;
     align-items: center;
   }
 }
 @media screen and (min-width: 720px) {
-  /* line 339, ../sass/style.scss */
+  /* line 338, ../sass/style.scss */
   main section article:first-of-type {
     flex-direction: row;
   }
 }
 @media screen and (min-width: 1080px) {
-  /* line 348, ../sass/style.scss */
+  /* line 347, ../sass/style.scss */
   main section {
     justify-content: space-between;
   }
-  /* line 350, ../sass/style.scss */
+  /* line 349, ../sass/style.scss */
   main section article {
     border: 3px outset #43C000;
     border-top: 0;
     width: 44vw;
     margin: 2.5vh 2.5vw;
   }
-  /* line 355, ../sass/style.scss */
+  /* line 354, ../sass/style.scss */
   main section article:first-of-type {
     margin: 0;
     border: 0;
     width: 100vw;
   }
-  /* line 360, ../sass/style.scss */
+  /* line 359, ../sass/style.scss */
   main section article:nth-child(4) {
     width: 100vw;
   }
-  /* line 363, ../sass/style.scss */
+  /* line 362, ../sass/style.scss */
   main section article .slide-box {
     border: 3px outset #43C000;
   }

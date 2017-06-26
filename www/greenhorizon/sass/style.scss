@@ -185,8 +185,9 @@ main{
             .slide-box{
                 background-color:#ffc333;
                 overflow:hidden;
-                max-height: 337px;
-                max-width: 449px;
+                height: 337px;
+                width: 449px;
+                max-width: 100%;
                 .slides{
                     position:relative;
                     .slide{
@@ -205,6 +206,7 @@ main{
                     position:absolute;
                     height:337px;
                     width:449px;
+                    max-width: 100%;
                     *{
                         height: 100%;
                         width: 15%;
@@ -269,9 +271,6 @@ main{
             background-repeat: no-repeat;
             background-position: top left, top right;
             background-size: contain, contain;
-        }
-        .winter:nth-child(1){
-            
         }
     }
 }
